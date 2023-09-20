@@ -8,8 +8,6 @@ class TaskUnit():
         #   Initiates self.task
         
         #Catch error for no input for task
-        
-        
         self.task = task
         if self.task == "":
             raise Exception("No input for task")
