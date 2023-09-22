@@ -76,10 +76,3 @@ pytest
 ```
 
 Ensure you have `pytest` installed. If not, install it using `pip install pytest`.
-
-## Contributing
-
-Feel free to contribute to this project by opening issues or creating pull requests. Your contributions are highly welcome!
-```
-
-You can copy and paste this code into your README.md file.
