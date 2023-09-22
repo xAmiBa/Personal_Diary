@@ -34,11 +34,11 @@ def test_view_completed_list():
     assert test_list.view_completed() == ["test task"]
 
 # @pytest.mark.skip
-# def test_view_incompleted_list():
-#     task1 = TaskUnit("test task")
-#     test_list = TaskList()
-#     test_list.add(task1)
-#     assert test_list.view_completed() == ["test task"]
+def test_view_incompleted_list():
+    task1 = TaskUnit("test task")
+    test_list = TaskList()
+    test_list.add(task1)
+    assert test_list.view_incompleted() == ["test task"]
 
 # ERRORS:
 def test_view_error_no_tasks():

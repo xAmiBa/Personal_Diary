@@ -1,5 +1,6 @@
 import pytest
-from lib.TaskList import *
+# from lib.TaskList import *
+from TaskList import TaskList
 
 """
 As a user
@@ -8,6 +9,7 @@ I want to keep a regular diary
 """
 
 class DiaryEntry:
+
     def __init__(self, title, contents):
         self.title = title
         self.contents = contents

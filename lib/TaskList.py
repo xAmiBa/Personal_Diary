@@ -5,13 +5,12 @@ I want to keep a todo list along with my diary
 '''
 
 from datetime import datetime
-from lib.TaskUnit import *
+from TaskUnit import TaskUnit
+
 
 class TaskList():
     def __init__(self) -> None:
         self.all_tasks = []  # all TaksUnit objects
-        self.completed = []  # completed TaksUnit objects
-        self.incompleted = []  # incompleted TaksUnit objects
     
     def add(self, task):
         self.task = task  # TaskUnit object
@@ -28,25 +27,25 @@ class TaskList():
         return "".join(tasks_view)  # task_view list presented as string
 
     def view_completed(self):
+        completed = []   # completed TaksUnit objects
         for item in self.all_tasks:
             if item.complete == True:
-                self.completed.append(item.task)
+                completed.append(item.task)
 
         # catches empty task list error
-        if self.completed == []:
+        if completed == []:
             raise Exception("No completed tasks!")
         
-        return self.completed
+        return completed
 
     def view_incompleted(self):
+        incompleted = []   # incompleted TaksUnit objects
         for item in self.all_tasks:
             if item.complete == False:
-                self.incompleted.append(item.task)
+                incompleted.append(item.task)
                 
         # catches empty task list error
-        if self.incompleted == []:
+        if incompleted == []:
             raise Exception("No incompleted tasks!")
         
-        return self.incompleted
-
-#TODO: List view by due date
+        return incompleted
